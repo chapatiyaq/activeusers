@@ -1,0 +1,8 @@
+<Files "cookies.tmp">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "databases.sql">
+Order Allow,Deny
+Deny from all
+</Files>
