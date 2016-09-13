@@ -1,0 +1,185 @@
+#heatmap-button {
+	background: linear-gradient(to right,rgb(139, 255, 139), rgb(1, 197, 1));
+}
+a {
+	text-decoration: none;
+	color: #002bb8;
+}
+a:hover {
+	text-decoration: underline;
+}
+input[type=checkbox] {
+	display:none;
+}
+.wiki-button {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	vertical-align: middle;
+	background-position: 50%;
+	background-size: 90%;
+	background-repeat: no-repeat;
+	border: 1px solid silver;
+	cursor: pointer;
+	margin: 5px 1px;
+	border-radius: 2px;
+}
+input[type=checkbox]:checked + .wiki-button {
+	box-shadow: 0 0 2px darkgreen, inset 0 0 30px rgba(0, 128, 0, .1);
+	border-color: darkgreen;
+}
+.wiki-button.starcraft {
+	background-image: url(../images/logos/starcraft.png);
+}
+.wiki-button.starcraft2 {
+	background-image: url(../images/logos/starcraft2.png);
+}
+.wiki-button.dota2 {
+	background-image: url(../images/logos/dota2.png);
+}
+.wiki-button.hearthstone {
+	background-image: url(../images/logos/hearthstone.png);
+}
+.wiki-button.heroes {
+	background-image: url(../images/logos/heroes.png);
+}
+.wiki-button.smash {
+	background-image: url(../images/logos/smash.png);
+}
+.wiki-button.counterstrike {
+	background-image: url(../images/logos/counterstrike.png);
+}
+.wiki-button.overwatch {
+	background-image: url(../images/logos/overwatch.png);
+}
+.wiki-button.commons {
+	background-image: url(../images/logos/commons.png);
+}
+.wiki-button.warcraft {
+	background-image: url(../images/logos/warcraft.png);
+}
+.wiki-button.fighters {
+	background-image: url(../images/logos/fighters.png);
+}
+.wiki-button.rocketleague {
+	background-image: url(../images/logos/rocketleague.png);
+}
+.table-wrapper {
+	overflow-x: scroll;
+}
+table {
+	border-collapse: collapse;
+}
+tr {
+	border-bottom: 1px solid #e8e8e8;
+}
+th {
+	font-weight: bold;
+	text-align: center;
+}
+abbr {
+	border-bottom: 1px dotted black;
+	cursor: help;
+}
+th.name {
+	width: 100px;
+}
+th.wiki,
+th.total {
+	width: 90px;
+}
+tr.total-row {
+	color: #a0a0a0;
+}
+tr.user-row:nth-child(odd) {
+	background-color: #f8f8f8;
+}
+td.pos,
+td.wiki,
+td.total {
+	text-align: right;
+	padding-right: 3px;
+}
+.header-row .wiki div {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.header-row .starcraft div {
+	background-image: url(../images/logos/starcraft.png);
+}
+.header-row .starcraft2 div {
+	background-image: url(../images/logos/starcraft2.png);
+}
+.header-row .dota2 div {
+	background-image: url(../images/logos/dota2.png);
+}
+.header-row .hearthstone div {
+	background-image: url(../images/logos/hearthstone.png);
+}
+.header-row .heroes div {
+	background-image: url(../images/logos/heroes.png);
+}
+.header-row .smash div {
+	background-image: url(../images/logos/smash.png);
+}
+.header-row .counterstrike div {
+	background-image: url(../images/logos/counterstrike.png);
+}
+.header-row .overwatch div {
+	background-image: url(../images/logos/overwatch.png);
+}
+.header-row .commons div {
+	background-image: url(../images/logos/commons.png);
+}
+.header-row .warcraft div {
+	background-image: url(../images/logos/warcraft.png);
+}
+.header-row .fighters div {
+	background-image: url(../images/logos/fighters.png);
+}
+.header-row .rocketleague div {
+	background-image: url(../images/logos/rocketleague.png);
+}
+.user-row td.wiki {
+	padding-left: 30px;
+}
+.user-row td.wiki,
+.user-row td.total {
+	background: linear-gradient(to right,rgba(228,228,228,.3), rgba(1,1,1,0));
+}
+/*td.user {
+	background-color: #f0f0f0;
+}
+td.editor {
+	background-color: #accce9;
+}
+td.sysop {
+	background-color: #68a8e0;
+}*/
+.user-row td.bot {
+	background: url(../images/misc/icon_22_computer.png) no-repeat 3px,
+		linear-gradient(to right,rgba(228,228,228,.3), rgba(1,1,1,0));
+}
+.diff {
+	color: silver;
+}
+.diff.negative {
+	color: #8b0000;
+}
+.diff.positive {
+	color: #006400;
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 14px;
+	}
+	.wiki-buttons,
+	#record-options > span {
+		display: block;
+	}
+}
