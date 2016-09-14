@@ -18,8 +18,8 @@ Fill the file 'connection.php' with the adequate logins and passwords:
 Images
 ======
 
-Place game logos in a folder named 'logos', and SVG flags in a folder named 'svg-flags', with both folders in a folder named 'images' at the same level as the 'activeusers' folder.
-The images are available in the LiquipediaImageResources repository: https://github.com/chapatiyaq/LiquipediaImageResources
+The images use in this project are available in the LiquipediaImageResources repository: https://github.com/chapatiyaq/LiquipediaImageResources
+Change the name of the folder to 'images' and put it at the same level as the 'activeusers' folder.
 
 Example of folder structure:
 
@@ -35,6 +35,8 @@ Example of folder structure:
     /logos
       /starcraft.png
       ...
+    /misc
+      /icon\_22\_computer.png
     /svg-flags
       /ad.svg
       ...
@@ -44,3 +46,7 @@ All game logos belong to their respective companies and owners.
 
 The SVG flags were taken from https://github.com/sqlitebrowser/iso-country-flags-svg-collection
 Some have been modified (color, shape) or added (Cascadia). Flags are in the Public Domain.
+
+User agent
+==========
+You can change the user agent in 'table.php' (search for "CURLOPT_USERAGENT"), especially to change the contact e-mail to your e-mail address.
