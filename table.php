@@ -99,7 +99,7 @@ function getContributions($curl, $postdata, &$wikiStats) {
 		);
 	}
 
-	return isset($data['query-continue']) ? $data['query-continue']['allusers']['aufrom'] : 0;
+	return isset($data['continue']) ? $data['continue'] : 0;
 }
 
 function mergeWikiStats(&$stats, $wiki, $wikiStats) {
@@ -317,19 +317,20 @@ if (is_int($params['view']) && $params['view'] > 0) {
 			curl_setopt($curl, CURLOPT_URL, 'http://wiki.teamliquid.net/' . $wiki . '/api.php');
 
 			// Contributions
-			$postdata = http_build_query(array(
+			$postdata = array(
 				'action' => 'query',
 				'list' => 'allusers',
 				'auwitheditsonly' => true,
 				'auactiveusers' => true,
 				'auprop' => 'editcount|groups',
 				'aulimit' => ($bot ? 5000 : 500),
+				'continue' => '',
 				'format' => 'php'
-			));
+			);
 			curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
 			$continue = getContributions($curl, $postdata, $wikiStats);
 			while ( $continue !== 0 ) {
-				$postdata['aufrom'] = str_replace(' ', '%20', $continue);
+				$postdata['aufrom'] = str_replace(' ', '%20', $continue['aufrom']);
 				$continue = getContributions($curl, $postdata, $wikiStats);
 			}
 
