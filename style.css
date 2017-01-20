@@ -64,6 +64,18 @@ input[type=checkbox]:checked + .wiki-button {
 .wiki-button.rocketleague {
 	background-image: url(../images/logos/rocketleague.png);
 }
+.wiki-button.clashroyale {
+	background-image: url(../images/logos/clashroyale.png);
+}
+.wiki-button.crossfire {
+	background-image: url(../images/logos/crossfire.png);
+}
+.wiki-button.teamfortress {
+	background-image: url(../images/logos/teamfortress.png);
+}
+.wiki-button.trackmania {
+	background-image: url(../images/logos/trackmania.png);
+}
 .table-wrapper {
 	overflow-x: scroll;
 }
@@ -143,6 +155,18 @@ td.total {
 }
 .header-row .rocketleague div {
 	background-image: url(../images/logos/rocketleague.png);
+}
+.header-row .clashroyale div {
+	background-image: url(../images/logos/clashroyale.png);
+}
+.header-row .crossfire div {
+	background-image: url(../images/logos/crossfire.png);
+}
+.header-row .teamfortress div {
+	background-image: url(../images/logos/teamfortress.png);
+}
+.header-row .trackmania div {
+	background-image: url(../images/logos/trackmania.png);
 }
 .user-row td.wiki {
 	padding-left: 30px;

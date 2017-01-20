@@ -1,12 +1,12 @@
 <?php
 // Wiki user name and password
-$loginName = '';
-$loginPass = '';
+$loginName = 'Chapabot';
+$loginPass = 'WZZkhkcVMs34';
 
 // Database name, user name, and password
-define ('DBNAME', '');
-define ('DBUSER', '');
-define ('DBPASSWORD', '');
+define ('DBNAME', 'tolueno_liquipedia');
+define ('DBUSER', 'tolueno_admin');
+define ('DBPASSWORD', 'ZbuH^Hb-,2o@');
 
 class Connection {
 
