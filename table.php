@@ -160,16 +160,6 @@ $params = getParams($store_in_db);
 $flags = getFlags($connection, $params['show_flags']);
 $previous_record = getRecord($connection, $params['compare_to_record']);
 
-$default_wikis = array('starcraft', 'starcraft2', 'dota2', 'hearthstone', 'heroes', 'smash', 'counterstrike', 'overwatch', 'commons', 'warcraft', 'fighters', 'rocketleague');
-$get_wikis = isset($_GET['wikis']) && is_array($_GET['wikis']) ? array_values($_GET['wikis']) : $default_wikis;
-$clean_wikis_list = array();
-foreach ($get_wikis as $wiki) {
-	if (preg_match('/^(' . implode('|', array_keys($wiki_names)) . ')$/',
-		$wiki)) {
-		$clean_wikis_list[] = $wiki;
-	}
-}
-
 $wiki_names = array(
 	'starcraft' => 'Brood War',
 	'starcraft2' => 'StarCraft II',
@@ -188,6 +178,15 @@ $wiki_names = array(
 	'teamfortress' => 'Team Fortress',
 	'trackmania' => 'TrackMania'
 );
+$default_wikis = array('starcraft', 'starcraft2', 'dota2', 'hearthstone', 'heroes', 'smash', 'counterstrike', 'overwatch', 'commons', 'warcraft', 'fighters', 'rocketleague');
+$get_wikis = isset($_GET['wikis']) && is_array($_GET['wikis']) ? array_values($_GET['wikis']) : $default_wikis;
+$clean_wikis_list = array();
+foreach ($get_wikis as $wiki) {
+	if (preg_match('/^(' . implode('|', array_keys($wiki_names)) . ')$/',
+		$wiki)) {
+		$clean_wikis_list[] = $wiki;
+	}
+}
 
 global $wikis;
 $wikis = array();
