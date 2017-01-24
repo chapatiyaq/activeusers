@@ -11,7 +11,7 @@ Example of cron table entry to execute the script every day with argument '1' ($
 Login / password
 ================
 
-Fill the file 'connection.php' with the adequate logins and passwords:
+Rename the file 'connection.php.example' to 'connection.php' and fill it with the adequate logins and passwords:
 * For the wiki, $loginName and $loginPass the username and password of a bot account
 * For the database, DBNAME, DBUSER and DBPASSWORD the database name, user name and password for access to the database (SELECT, INSERT INTO, and UPDATE operations)
 
@@ -28,6 +28,7 @@ Example of folder structure:
   /activeusers
     /index.php
     /table.php
+    /connection.php
     /flag-icon.min.css
     /style.css
     ...
