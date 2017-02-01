@@ -152,6 +152,7 @@ function diffSpanHtml($count_diff) {
 
 // The variables $loginName (wiki user name) and $loginPass (wiki password) must be set in login.php
 require_once('connection.php');
+require_once('wikis.php');
 $connection = Connection::getConnection();
 $cookieFile = 'cookies.tmp';
 // The value of $store_in_db is set in 'index.php'
@@ -160,25 +161,6 @@ $params = getParams($store_in_db);
 $flags = getFlags($connection, $params['show_flags']);
 $previous_record = getRecord($connection, $params['compare_to_record']);
 
-$wiki_names = array(
-	'starcraft' => 'Brood War',
-	'starcraft2' => 'StarCraft II',
-	'dota2' => 'Dota 2',
-	'hearthstone' => 'Hearthstone',
-	'heroes' => 'Heroes',
-	'smash' => 'Smash Bros',
-	'counterstrike' => 'Counter-Strike',
-	'overwatch' => 'Overwatch',
-	'commons' => 'Commons',
-	'warcraft' => 'Warcraft',
-	'fighters' => 'Fighting Games',
-	'rocketleague' => 'Rocket League',
-	'clashroyale' => 'Clash Royale',
-	'crossfire' => 'CrossFire',
-	'teamfortress' => 'Team Fortress',
-	'trackmania' => 'TrackMania'
-);
-$default_wikis = array('starcraft', 'starcraft2', 'dota2', 'hearthstone', 'heroes', 'smash', 'counterstrike', 'overwatch', 'commons', 'warcraft', 'fighters', 'rocketleague');
 $get_wikis = isset($_GET['wikis']) && is_array($_GET['wikis']) ? array_values($_GET['wikis']) : $default_wikis;
 $clean_wikis_list = array();
 foreach ($get_wikis as $wiki) {

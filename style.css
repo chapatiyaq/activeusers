@@ -70,11 +70,26 @@ input[type=checkbox]:checked + .wiki-button {
 .wiki-button.crossfire {
 	background-image: url(../images/logos/crossfire.png);
 }
+.wiki-button.battlerite {
+	background-image: url(../images/logos/battlerite.png);
+}
 .wiki-button.teamfortress {
 	background-image: url(../images/logos/teamfortress.png);
 }
 .wiki-button.trackmania {
 	background-image: url(../images/logos/trackmania.png);
+}
+.wiki-button.diabotical {
+	background-image: url(../images/logos/diabotical.png);
+}
+.wiki-button.leagueoflegends {
+	background-image: url(../images/logos/leagueoflegends.png);
+}
+.wiki-button.worldofwarcraft {
+	background-image: url(../images/logos/worldofwarcraft.png);
+}
+.wiki-button.fifa {
+	background-image: url(../images/logos/fifa.png);
 }
 .table-wrapper {
 	overflow-x: scroll;
@@ -162,11 +177,26 @@ td.total {
 .header-row .crossfire div {
 	background-image: url(../images/logos/crossfire.png);
 }
+.header-row .batlerite div {
+	background-image: url(../images/logos/batlerite.png);
+}
 .header-row .teamfortress div {
 	background-image: url(../images/logos/teamfortress.png);
 }
 .header-row .trackmania div {
 	background-image: url(../images/logos/trackmania.png);
+}
+.header-row .diabotical div {
+	background-image: url(../images/logos/diabotical.png);
+}
+.header-row .leagueoflegends div {
+	background-image: url(../images/logos/leagueoflegends.png);
+}
+.header-row .worldofwarcraft div {
+	background-image: url(../images/logos/worldofwarcraft.png);
+}
+.header-row .fifa div {
+	background-image: url(../images/logos/fifa.png);
 }
 .user-row td.wiki {
 	padding-left: 30px;
