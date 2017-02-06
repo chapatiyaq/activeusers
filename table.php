@@ -164,7 +164,7 @@ $previous_record = getRecord($connection, $params['compare_to_record']);
 $get_wikis = isset($_GET['wikis']) && is_array($_GET['wikis']) ? array_values($_GET['wikis']) : $default_wikis;
 $clean_wikis_list = array();
 foreach ($get_wikis as $wiki) {
-	if (preg_match('/^(' . implode('|', array_keys($wiki_names)) . ')$/',
+	if (preg_match('/^(' . implode('|', array_keys($wiki_details)) . ')$/',
 		$wiki)) {
 		$clean_wikis_list[] = $wiki;
 	}
@@ -173,7 +173,7 @@ foreach ($get_wikis as $wiki) {
 global $wikis;
 $wikis = array();
 foreach ($clean_wikis_list as $wiki) {
-	$wikis[$wiki] = $wiki_names[$wiki];
+	$wikis[$wiki] = $wiki_details[$wiki]['name'];
 }
 
 $record_cache = getCache($connection, $wikis);

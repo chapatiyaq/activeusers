@@ -11,7 +11,7 @@ a:hover {
 input[type=checkbox] {
 	display:none;
 }
-.wiki-button {
+.wiki-button label {
 	width: 32px;
 	height: 32px;
 	display: inline-block;
@@ -24,72 +24,81 @@ input[type=checkbox] {
 	margin: 5px 1px;
 	border-radius: 2px;
 }
-input[type=checkbox]:checked + .wiki-button {
+.wiki-button input[type=checkbox]:checked + label {
 	box-shadow: 0 0 2px darkgreen, inset 0 0 30px rgba(0, 128, 0, .1);
 	border-color: darkgreen;
 }
-.wiki-button.starcraft {
+.wiki-button.starcraft label {
 	background-image: url(../images/logos/starcraft.png);
 }
-.wiki-button.starcraft2 {
+.wiki-button.starcraft2 label {
 	background-image: url(../images/logos/starcraft2.png);
 }
-.wiki-button.dota2 {
+.wiki-button.dota2 label {
 	background-image: url(../images/logos/dota2.png);
 }
-.wiki-button.hearthstone {
+.wiki-button.hearthstone label {
 	background-image: url(../images/logos/hearthstone.png);
 }
-.wiki-button.heroes {
+.wiki-button.heroes label {
 	background-image: url(../images/logos/heroes.png);
 }
-.wiki-button.smash {
+.wiki-button.smash label {
 	background-image: url(../images/logos/smash.png);
 }
-.wiki-button.counterstrike {
+.wiki-button.counterstrike label {
 	background-image: url(../images/logos/counterstrike.png);
 }
-.wiki-button.overwatch {
+.wiki-button.overwatch label {
 	background-image: url(../images/logos/overwatch.png);
 }
-.wiki-button.commons {
+.wiki-button.commons label {
 	background-image: url(../images/logos/commons.png);
 }
-.wiki-button.warcraft {
+.wiki-button.warcraft label {
 	background-image: url(../images/logos/warcraft.png);
 }
-.wiki-button.fighters {
+.wiki-button.fighters label {
 	background-image: url(../images/logos/fighters.png);
 }
-.wiki-button.rocketleague {
+.wiki-button.rocketleague label {
 	background-image: url(../images/logos/rocketleague.png);
 }
-.wiki-button.clashroyale {
+.wiki-button.clashroyale label {
 	background-image: url(../images/logos/clashroyale.png);
 }
-.wiki-button.crossfire {
+.wiki-button.crossfire label {
 	background-image: url(../images/logos/crossfire.png);
 }
-.wiki-button.battlerite {
+.wiki-button.battlerite label {
 	background-image: url(../images/logos/battlerite.png);
 }
-.wiki-button.teamfortress {
+.wiki-button.teamfortress label {
 	background-image: url(../images/logos/teamfortress.png);
 }
-.wiki-button.trackmania {
+.wiki-button.trackmania label {
 	background-image: url(../images/logos/trackmania.png);
 }
-.wiki-button.diabotical {
+.wiki-button.diabotical label {
 	background-image: url(../images/logos/diabotical.png);
 }
-.wiki-button.leagueoflegends {
+.wiki-button.leagueoflegends label {
 	background-image: url(../images/logos/leagueoflegends.png);
 }
-.wiki-button.worldofwarcraft {
+.wiki-button.worldofwarcraft label {
 	background-image: url(../images/logos/worldofwarcraft.png);
 }
-.wiki-button.fifa {
+.wiki-button.fifa label {
 	background-image: url(../images/logos/fifa.png);
+}
+.wiki-buttons-helpers {
+	margin-bottom: .5em;
+}
+.wiki-buttons-helpers button {
+	font-size: 11px;
+}
+.wiki-buttons-helpers button + button {
+	margin-left: .5em;
 }
 .table-wrapper {
 	overflow-x: scroll;
