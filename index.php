@@ -136,7 +136,7 @@ if (count($result)) {
 $cache = 'cache/index_compare_' . $view . '-' . $compare_to_record . '_' . implode('_', $clean_wikis_list) . '.html';
 $expire = time() - 3600 ; // valable une heure
  
-if(!$store_in_db && file_exists($cache) && filemtime($cache) > $expire)
+if (!$store_in_db && file_exists($cache) && filemtime($cache) > $expire)
 {
 	echo '<b>Cached: ' . date('r (T)', filemtime($cache)) . '</b><br/>';
 	echo 'Current server time: ' . date('r (T)') . ' - The cache expires after 60 minutes.<br/><br/>';
