@@ -132,6 +132,11 @@ if (count($result)) {
 	<p>This is a list of users who had some kind of activity (edits, file uploads, moves, deletions...) within the last 30 days. Numbers represent actions in the last 30 days.</p>
 
 <?php
+if (!isset($_GET['wikis']) || !is_array($_GET['wikis'])) {
+	echo '<p>Please select wikis and submit</p>';
+	echo '</body></html>';
+	return;
+}
 /*debut du cache*/
 $cache = 'cache/index_compare_' . $view . '-' . $compare_to_record . '_' . implode('_', $clean_wikis_list) . '.html';
 $expire = time() - 3600 ; // valable une heure
