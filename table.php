@@ -499,7 +499,7 @@ foreach($stats as $username => $userstats) {
 	if ($i > 2000)
 		break;
 }
-if (($clean_wikis_list == $default_wikis) && $params['store_in_db']) {
+if (($clean_wikis_list == array_keys($wiki_details)) && $params['store_in_db']) {
 	$stmt = $connection->prepare("INSERT INTO activeusers (`record`) VALUES (:record)");
 	$record = array('stats' => $stats, 'total' => $total, 'total_without_bots' => $total_without_bots);
 	$stmt->bindValue(':record', json_encode($record));
